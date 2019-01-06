@@ -13,7 +13,7 @@ node {
         stage 'Test'
             sh 'cd /home/vagrant/projects/django/api-microserver/'
             sh 'ls'
-            sh 'make start-dev'
+            sh 'sudo docker-compose up'
 
         stage 'Deploy'
             sh 'ls'
