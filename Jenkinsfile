@@ -1,5 +1,48 @@
 #!groovy
 
+def BuildDev()) {
+    timeout(120) {
+        waitUntil {
+            try {
+                sh 'make build-dev'
+                return true
+            } catch (exception) {
+                return false
+            }
+        }
+    }
+}
+
+def StartDev()) {
+    timeout(120) {
+        waitUntil {
+            try {
+                sh 'make start-dev-daemon'
+                return true
+            } catch (exception) {
+                return false
+            }
+        }
+    }
+}
+
+def StopDev()) {
+    timeout(120) {
+        waitUntil {
+            try {
+                sh 'make stop-dev'
+                return true
+            } catch (exception) {
+                return false
+            }
+        }
+    }
+}
+
+def RunTest()) {
+    sh 'sudo docker-compose exec -T web python manage.py test deployer'
+}
+
 node {
 
     try {
@@ -12,20 +55,10 @@ node {
 
         stage 'Test'
             sh 'cd /home/vagrant/projects/django/api-microserver/'
-            timeout(120) {
-                waitUntil {
-                    try {
-                        sh 'make start-dev-daemon'
-                        return true
-                    } catch (exception) {
-                        return false
-                    }
-                }
-            }
-            sh ''' 
-                sudo docker-compose exec -T web python manage.py test deployer
-                make stop-dev
-            '''
+            BuildDev()
+            StartDev()
+            RunTest()
+            StopDev()
 
         stage 'Deploy'
             sh 'ls'
