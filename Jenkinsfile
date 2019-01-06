@@ -12,8 +12,9 @@ node {
 
         stage 'Test'
             sh 'cd /home/vagrant/projects/django/api-microserver/'
-            sh 'ls'
-            sh 'sudo docker-compose up'
+            sh 'make start-dev-daemon'
+            sh 'make ssh-dev'
+            sh 'python manage.py test deployer'
 
         stage 'Deploy'
             sh 'ls'

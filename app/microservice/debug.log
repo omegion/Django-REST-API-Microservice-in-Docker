@@ -1,0 +1,65 @@
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+Session data corrupted
+Unauthorized: /api/v1/deploys
+"GET /api/v1/deploys HTTP/1.1" 401 5011
+Session data corrupted
+Unauthorized: /api/v1/deploys
+"GET /api/v1/deploys HTTP/1.1" 401 5011
+Session data corrupted
+Unauthorized: /api/v1/deploys
+"GET /api/v1/deploys HTTP/1.1" 401 5011
+Session data corrupted
+Unauthorized: /api/v1/deploys
+"GET /api/v1/deploys HTTP/1.1" 401 5011
+Not Found: /api/v1
+"GET /api/v1 HTTP/1.1" 404 2072
+Session data corrupted
+"GET /admin/ HTTP/1.1" 302 0
+Session data corrupted
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+"GET /static/admin/css/base.css HTTP/1.1" 200 16225
+"GET /static/admin/css/login.css HTTP/1.1" 200 1203
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17976
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+Session data corrupted
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 4436
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2087
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2087
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys/1 HTTP/1.1" 301 0
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+Not Found: /api/v1/deploys/
+"GET /api/v1/deploys/ HTTP/1.1" 404 2652
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /api/v1/deploys HTTP/1.1" 200 8807

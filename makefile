@@ -1,6 +1,9 @@
 start-dev:
 	sudo docker-compose up
 
+start-dev-daemon:
+	sudo docker-compose up -d
+
 start-prod:
 	sudo docker-compose -f docker-compose.prod.yml up
 
