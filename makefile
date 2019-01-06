@@ -4,12 +4,12 @@ start-dev:
 start-dev-daemon:
 	sudo docker-compose up -d
 
+stop-dev:
+	# @eval sudo docker stop $$(sudo docker ps -a -q)
+	sudo docker-compose down
+
 start-prod:
 	sudo docker-compose -f docker-compose.prod.yml up
-
-stop-compose:
-	@eval docker stop $$(docker ps -a -q)
-	sudo docker-compose down
 
 ssh-web:
 	sudo docker-compose exec web bash

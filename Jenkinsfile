@@ -13,8 +13,9 @@ node {
         stage 'Test'
             sh 'cd /home/vagrant/projects/django/api-microserver/'
             sh 'make start-dev-daemon'
-            sh 'make ssh-dev'
+            sh 'make ssh-web'
             sh 'python manage.py test deployer'
+            sh 'make stop-dev'
 
         stage 'Deploy'
             sh 'ls'
