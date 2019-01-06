@@ -1,6 +1,6 @@
 #!groovy
 
-def BuildDev()) {
+def BuildDev() {
     timeout(120) {
         waitUntil {
             try {
@@ -13,7 +13,7 @@ def BuildDev()) {
     }
 }
 
-def StartDev()) {
+def StartDev() {
     timeout(120) {
         waitUntil {
             try {
@@ -26,7 +26,7 @@ def StartDev()) {
     }
 }
 
-def StopDev()) {
+def StopDev() {
     timeout(120) {
         waitUntil {
             try {
@@ -39,7 +39,7 @@ def StopDev()) {
     }
 }
 
-def RunTest()) {
+def RunTest() {
     sh 'sudo docker-compose exec -T web python manage.py test deployer'
 }
 
