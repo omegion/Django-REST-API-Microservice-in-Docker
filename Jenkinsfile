@@ -11,10 +11,18 @@ node {
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
+            sh 'cd /home/vagrant/projects/django/api-microserver/'
+            timeout(120) {
+                waitUntil {
+                    try {
+                        sh 'make start-dev-daemon'
+                        return true
+                    } catch (exception) {
+                        return false
+                    }
+                }
+            }
             sh ''' 
-                cd /home/vagrant/projects/django/api-microserver/
-                make start-dev-daemon
-                sleep 10
                 sudo docker-compose exec -T web python manage.py test deployer
                 make stop-dev
             '''
