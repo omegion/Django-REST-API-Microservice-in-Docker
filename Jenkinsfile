@@ -13,6 +13,7 @@ node {
         stage 'Test'
             sh 'cd /home/vagrant/projects/django/api-microserver/'
             sh 'ls'
+            sh 'make start-dev'
 
         stage 'Deploy'
             sh 'ls'
