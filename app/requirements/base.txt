@@ -1,0 +1,7 @@
+django
+django-rest-framework
+django-rest-swagger
+django-rest-auth
+celery
+mysqlclient
+redis
