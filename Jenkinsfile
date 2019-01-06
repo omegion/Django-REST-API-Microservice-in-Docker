@@ -15,7 +15,7 @@ node {
                 cd /home/vagrant/projects/django/api-microserver/
                 make start-dev-daemon
                 sleep 10
-                sudo docker-compose exec -T web python manage.py test deployerloyer
+                sudo docker-compose exec -T web python manage.py test deployer
                 make stop-dev
             '''
 
