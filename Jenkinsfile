@@ -11,11 +11,14 @@ node {
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
-            sh 'cd /home/vagrant/projects/django/api-microserver/'
-            sh 'make start-dev-daemon'
-            sh 'make ssh-web'
-            sh 'python manage.py test deployer'
-            sh 'make stop-dev'
+            sh ''' 
+                cd /home/vagrant/projects/django/api-microserver/
+                make start-dev-daemon
+                make ssh-web
+                sleep 7
+                python manage.py test deployer
+                make stop-dev
+            '''
 
         stage 'Deploy'
             sh 'ls'
