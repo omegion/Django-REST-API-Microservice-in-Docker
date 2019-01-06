@@ -14,8 +14,8 @@ node {
             sh ''' 
                 cd /home/vagrant/projects/django/api-microserver/
                 make start-dev-daemon
+                sleep 10
                 make ssh-web
-                sleep 7
                 python manage.py test deployer
                 make stop-dev
             '''
