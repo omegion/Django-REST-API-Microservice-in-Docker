@@ -1,4 +1,4 @@
-# Example Repository for Running Django Application in Docker
+# Running Django Application in Docker
 
 This repository contains information about running Django with Celery, Nginx and Gunicorn in Docker for both development and production.
 
