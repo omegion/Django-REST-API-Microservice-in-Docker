@@ -53,10 +53,11 @@ node {
             def lastChanges = readFile('GIT_CHANGES')
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
-        stage 'Test'
-            sh 'cd /home/vagrant/projects/django/api-microserver/'
+        stage 'Build'
             BuildDev()
             StartDev()
+
+        stage 'Test'
             RunTest()
             StopDev()
 
