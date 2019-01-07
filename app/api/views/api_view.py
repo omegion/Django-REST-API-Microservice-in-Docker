@@ -16,12 +16,6 @@ class DetailDeployer(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = DeployerSerializer
 
     def get(self, request, *args, **kwargs):
-        print(settings.SECRET_KEY)
         # test_task.apply_async(args=["asd"], countdown=1, expires=120)
         # test_task.delay("receive get")
         return self.retrieve(request, *args, **kwargs)
-
-    def put(self, request, *args, **kwargs):
-        test_task("receive put")
-        return self.retrieve(request, *args, **kwargs)
-

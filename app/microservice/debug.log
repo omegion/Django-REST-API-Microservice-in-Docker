@@ -75,3 +75,97 @@ Not Found: /api/v1/deploys/
 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Unauthorized: /api/v1/deploys
+Internal Server Error: /api/v1/deploys/1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.6/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/app/api/views/api_view.py", line 25, in put
+    test_task("receive put")
+  File "/usr/local/lib/python3.6/site-packages/celery/local.py", line 191, in __call__
+    return self._get_current_object()(*a, **kw)
+  File "/usr/local/lib/python3.6/site-packages/celery/app/task.py", line 375, in __call__
+    return self.run(*args, **kwargs)
+  File "/app/deployer/tasks.py", line 14, in test_task
+    holder = int(deployer.queue_id)+1
+AttributeError: 'NoneType' object has no attribute 'queue_id'
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2087
+"GET /api/v1/deploys/1 HTTP/1.1" 301 0
+"GET /api/v1/deploys/1/ HTTP/1.1" 200 10188
+Not Found: /api/v1/deploys/1/
+Not Found: /api/v1/deploys/1/
+"GET /api/v1/deploys/1/ HTTP/1.1" 404 2710
+Not Found: /api/v1/deploys/1/
+"GET /api/v1/deploys/1/ HTTP/1.1" 404 2710
+"GET /api/v1/deploys/1? HTTP/1.1" 200 10179
+Not Found: /api/v1/deploys/1
+Not Found: /api/v1/deploys/1
+Not Found: /api/v1/deploys/2
+"GET /api/v1/deploys/1? HTTP/1.1" 200 10179
+Not Found: /api/v1/deploys/2
+Not Found: /api/v1/deploys/2
+Not Found: /api/v1/deploys/2
+Not Found: /api/v1/deploys/2
+Not Found: /api/v1/deploys/2
+Not Found: /api/v1/deploys/5
+"GET /api/v1/deploys/1? HTTP/1.1" 200 10179
+"GET /api/v1/deploys HTTP/1.1" 200 8807
+"POST /api/v1/deploys HTTP/1.1" 201 8761
+"GET /api/v1/deploys HTTP/1.1" 200 8885
+Not Found: /api/v1/deploys/5
+Not Found: /api/v1/deploys/5
+Unsupported Media Type: /api/v1/deploys/6
+Unsupported Media Type: /api/v1/deploys/6
+"GET /api/v1/deploys HTTP/1.1" 200 8885
+Not Found: /api/v1/deploys/1/
+"GET /api/v1/deploys/1/ HTTP/1.1" 404 2710
+"GET /api/v1/deploys/1? HTTP/1.1" 200 10179
+"PUT /api/v1/deploys/1 HTTP/1.1" 200 10179
+"PUT /api/v1/deploys/1 HTTP/1.1" 200 10179
+"GET /api/v1/deploys/1 HTTP/1.1" 200 10179
+Unsupported Media Type: /api/v1/deploys/6
+Unsupported Media Type: /api/v1/deploys/6
+Unsupported Media Type: /api/v1/deploys/6
+"DELETE /api/v1/deploys/1 HTTP/1.1" 200 9973
+Not Found: /api/v1/deploys/1
+"GET /api/v1/deploys/1 HTTP/1.1" 404 9999
+"GET /api/v1/deploys HTTP/1.1" 200 8727
+"POST /api/v1/deploys HTTP/1.1" 201 8908
+"GET /api/v1/deploys HTTP/1.1" 200 8871
+"GET /api/v1/deploys?format=json HTTP/1.1" 200 95
