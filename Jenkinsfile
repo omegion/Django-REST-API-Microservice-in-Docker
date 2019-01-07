@@ -40,7 +40,7 @@ def StopDev() {
 }
 
 def RunTest() {
-    sh 'sudo docker-compose exec -T web python manage.py test deployer'
+    sh 'sudo docker-compose exec -T web python manage.py test deployer -v 2'
 }
 
 node {
