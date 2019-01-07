@@ -54,6 +54,7 @@ node {
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Build'
+            StopDev()
             BuildDev()
             StartDev()
 

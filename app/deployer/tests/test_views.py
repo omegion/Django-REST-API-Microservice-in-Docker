@@ -55,7 +55,7 @@ class TestNoteApi(APITestCase):
         )
 
         # check info returned has the update
-        self.assertEqual('asd', response.data['queue_id'])
+        self.assertEqual(new_deploy['queue_id'], response.data['queue_id'])
 
     def test_deleting_deploy(self):
         response = self.client.delete(reverse(URL_PREFIX+'.detail', kwargs={'pk': self.deploy.id}))
